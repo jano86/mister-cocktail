@@ -1,0 +1,19 @@
+<h1>cocktails#show</h1>
+<div class="container">
+  <div class="row">
+    <div class="text-center">
+<p><%= @cocktail.name %></p>
+<% if @cocktail.picture_file_name != nil  %>
+<p><%= image_tag @cocktail.picture.url(:medium) %></p>
+<% end %>
+<ul>
+  <% @cocktail.doses.each do |dose| %>
+    <li><%= "#{dose.amount} #{dose.ingredient.name}" %></li>
+  <% end %>
+</ul>
+
+
+<button class="btn btn-success"><%= link_to 'Ajouter un ingredient', new_cocktail_dose_path(@cocktail)  %></button>
+</div>
+</div>
+</div>
