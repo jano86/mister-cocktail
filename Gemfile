@@ -8,7 +8,7 @@ gem 'font-awesome-sass', '~> 4.2.0'
 gem 'bootstrap_form'
 gem 'figaro'
 gem 'pghero'
-gem 'aws-sdk'
+gem 'aws-sdk', '< 2.0'
 gem 'paperclip'
 
 group :development do
